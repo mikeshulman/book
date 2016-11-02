@@ -116,6 +116,9 @@
 
 \input{macros}
 
+\usepackage{xcite} % allow external citations
+\externalcitedocument{hott-online}
+
 %%%% Indexing
 \usepackage{makeidx}
 \makeindex
@@ -860,6 +863,13 @@ While the page numbering may differ between copies with different version marker
   \cref{sec:more-formal-identity}
   & 578-ga4b94a5
   & The unbased eliminator for the identity type should be named $\indid{A}$, not $\indidb{A}$.\\
+  %
+  % Bibliography
+  %
+  \cite{martin-lof:bibliopolis}
+  & % merge of 8f3b1b9
+  & Citation should include note: ``Notes by Giovanni Sambin of a Series of Lectures given in Padua, June 1980''.
+  
 %% END ERRATA
 \end{longtable}
 
