@@ -120,8 +120,8 @@ $(BOOKAUXFILES) : %.aux : %.tex
 	echo "WARNING: assuming $> is up-to-date"
 
 # Generate labels for the solutions
-main.labels: $(BOOKAUXFILES)
-	cat $^ | grep ^.newlabel >$@
+main.labels: $(BOOKAUXFILES) hott-online.aux
+	cat $^ | egrep '^.(newlabel|bibcite)' >$@
 
 # Extract label numbers for verifying that they haven't changed within an edition.
 # Discard symbol index numbers (not seen by user) and page numbers (we don't care about them).
